@@ -1,9 +1,12 @@
 ---
 layout: default
-title: Hank Quinlan, Horrible Cop
 ---
 
-		<div class="blurb">
-			<h1>Hi there, I'm Hank Quinlan!</h1>
-			<p>I'm best known as the horrible cop from <em>A Touch of Evil</em>. Don't trust me. <a href="/about">Read more about my life...</a></p>
-		</div> 
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  {% include post.html post=post content=post.content %}
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+    {% include pagination.html maxPages=5 %}
+{% endif %}
