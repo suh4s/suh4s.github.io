@@ -1,4 +1,11 @@
-<footer id="footer">
-    <p>Your Host: <strong><a href="{{ site.author_link }}" target="_blank">{{ site.author }}</a></strong></p>
-    <p class="legal">{{ site.author_description }}</p>
+<footer class="site-footer">
+    {{ site.description }}<br />
+
+    Using <a href="http://jekyllrb.com/">Jekyll</a>
+    {% if site.sourcecode %}
+     :: <a href="{{ site.sourcecode }}">Website source</a>
+    {% endif %}
+    {% if site.analytics.provider and page.analytics != false %}
+     :: Analytics by {{ site.analytics.provider }}
+    {% endif %}
 </footer>

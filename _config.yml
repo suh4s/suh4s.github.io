@@ -1,40 +1,57 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+title: Geeky corner
+description: Much-Worse Jekyll theme for academic page and blog
+sourcecode: "https://github.com/gchauras/much-worse-jekyll-theme"
 
-# Site settings
-title: Travelog
-author: Your name
-author_link: https://whatever.you/like
-author_description: A few words to describe you & your face
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+permalink: blog/:year/:month/:day/:title
+exclude: ["Makefile", "README.md"]
 
-# Picturefill
-# A responsive image polyfill: http://scottjehl.github.io/picturefill/
-picturefill: false
+url: "http://gchauras.github.io"     # the base hostname & protocol for your site
+baseurl: "/much-worse-jekyll-theme"                   # the subpath of your site, e.g. /blog
 
-# Typography
-# To use, publish a kit and enter the ID here. If you do not wish to use Typekit,
-# leave this ID blank
-typekit_kit_id: kwf5dox
+author:
+    name:
+    facebook:
+    scholar:
 
 # Build settings
-gems: [jekyll-paginate]
 markdown: kramdown
-permalink: pretty
+highlighter: rouge
 
-# Pagination
-paginate: 5
+# Settings for analytics helper
+# Set 'provider' to the analytics provider you want to use.
+# Set 'provider' to false to turn analytics off globally.
+#
+analytics:
+    provider:
+    statcounter:
+        sc_project  :
+        sc_security :
+        sc_invisible: 1
+        sc_text     : 2
+    google:
+        tracking_id: ''
+    getclicky:
+      site_id:
+    mixpanel:
+        token: ''
+    piwik:
+        baseURL: '' # Piwik installation address (without protocol)
+        idsite: ''  # the id of the site on Piwik
 
-# Sass
-sass:
-    style: :compressed
+# Settings for comments helper
+# Set 'provider' to the comment provider you want to use.
+# Set 'provider' to false to turn commenting off globally.
+#
+comments:
+    provider:
+    disqus:
+      short_name:
+    livefyre:
+      site_id:
+    intensedebate:
+      account:
+    facebook:
+      appid:
+      num_posts: 5
+      width: 580
+      colorscheme: light
